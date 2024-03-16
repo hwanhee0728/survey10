@@ -45,7 +45,7 @@ def download_excel():
             )
 
 # 환경변수를 로드한다. (ChatGPT API Key를 .env라는 파일에 넣어야 함. OPENAI_API_KEY=시리얼넘버)
-load_dotenv()
+# load_dotenv()
 admin_key = os.getenv('ADMIN')
 
 def app():
