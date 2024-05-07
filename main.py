@@ -72,6 +72,7 @@ def app():
         st.write("")
         st.write("")
         st.write("")
+        st.write("")
 
         # 엑셀 다운로드
         password = st.text_input(":computer: 관리자", type="password")
@@ -85,7 +86,7 @@ def app():
 
     with col2:
         st.write("")        
-        st.write(":heavy_check_mark: 챗봇을 사용하고 느낀점을 솔직히 써주세요!")
+        st.write(":heavy_check_mark: 챗봇을 사용하고 느낀점을 솔직히 써주세요! (제출하기 버튼 Click!)")
         
         # 사용자 입력 양식
         with st.form(key='survey_form'):
