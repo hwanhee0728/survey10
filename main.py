@@ -53,7 +53,7 @@ def app():
     col1, col2 = st.columns([6,15])
 
     with col1:
-        st.subheader(:parachute: Survey')
+        st.subheader(':parachute: Survey')
         image = Image.open('survey01.png')
         st.image(image, width=170)
 
