@@ -50,25 +50,29 @@ admin_key = os.getenv('ADMIN')
 
 def app():
 
-    col1, col2 = st.columns([1,3])
+    col1, col2 = st.columns([6,15])
 
     with col1:
-        st.subheader(':chart_with_upwards_trend: Survey')
+        st.subheader(:parachute: Survey')
         image = Image.open('survey01.png')
-        st.image(image, width=160)
+        st.image(image, width=170)
 
         st.write("")
+        st.write(':shamrock: KMLA Chatbot Team')
+        st.write(':fire:구환희 전지훈 권휘우')
         st.write("")
-        st.write(':star:별다방쿠폰 드려욧')
-        st.caption(':unicorn_face:추첨 : 2만원 * 3명')
-        st.caption(':unicorn_face:선정 : 2만원 * 2명')
+        st.write("")
+        st.write(':star::star::star::star::star::star::star:')
+        st.write('별다방 쿠폰 드립니다!')
+        st.write('만족도조사 하신분께!')
+        st.write(':unicorn_face:추첨 : 2만원 * 3명')
+        st.write(':unicorn_face:선정 : 2만원 * 2명')
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
 
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
+
         # 엑셀 다운로드
         password = st.text_input(":computer: 관리자", type="password")
         if password:
