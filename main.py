@@ -25,17 +25,17 @@ def get_local_ip():
 # 데이터 저장 함수
 def save_data(new_data):
     try:
-        existing_data = pd.read_excel("survey_results.xlsx")
+        existing_data = pd.read_excel("survey.xlsx")
         updated_data = pd.concat([existing_data, new_data], ignore_index=True)
     except FileNotFoundError:
         updated_data = new_data
 
-    updated_data.to_excel("survey_results.xlsx", index=False)
+    updated_data.to_excel("survey.xlsx", index=False)
     st.success("설문 응답이 저장되었습니다.")
 
 # 엑셀 파일 다운로드를 위한 함수
 def download_excel():
-    filename = 'survey_results.xlsx'
+    filename = 'survey.xlsx'
     with open(filename, "rb") as file:
         btn = st.download_button(
                 label="설문 결과 다운로드",
@@ -63,8 +63,9 @@ def app():
         st.write("")
         st.write("")
         st.write(':star::star::star::star::star::star::star:')
-        st.write('별다방 쿠폰 드립니다!')
+        st.write('별다방 쿠폰 드립니다!')     
         st.write('만족도조사 하신분께!')
+        st.write('(기간 : 5월13월~18토)')   
         st.write(':unicorn_face:추첨 : 2만원 * 3명')
         st.write(':unicorn_face:선정 : 2만원 * 2명')
         st.write("")
