@@ -70,6 +70,7 @@ def app():
         st.write(':cupcake:선정 : 2만원 * 2명')
         st.write("")
         st.write("")
+        st.write("")
 
         # 엑셀 다운로드
         password = st.text_input(":computer: 관리자", type="password")
