@@ -56,7 +56,8 @@ def app():
     with col1:
         st.subheader(':parachute: Survey')
         image = Image.open('survey01.png')
-        st.image(image, width=170)
+        image = image.resize((170, 170))
+        st.image(image)
 
         st.write("")
         st.write(':shamrock: KMLA Chatbot Team')
