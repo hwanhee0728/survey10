@@ -75,7 +75,7 @@ def app():
         st.write("")
 
         # 엑셀 다운로드
-        password = st.text_input(":computer: 관리자", type="password")
+        password = st.text_input(":lock: 관리자", type="password")
         if password:
             if password == admin_key:
                 # 비밀번호가 맞으면 다운로드 버튼 표시
@@ -86,7 +86,7 @@ def app():
 
     with col2:
         st.write("")        
-        st.write(":heavy_check_mark: 챗봇을 사용하고 느낀점을 솔직히 써주세요!")
+        st.write(":heavy_check_mark: 챗봇을 사용하고 느낀점을 솔직히 써주세요! :yum:")
         
         # 사용자 입력 양식
         with st.form(key='survey_form'):
