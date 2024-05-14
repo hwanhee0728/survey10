@@ -62,7 +62,7 @@ def app():
         st.write("")
         st.write(':fire: KMLA Chatbot Team')
         st.write('(구환희,전지훈,권휘우)')
-        st.write("")
+        st.write("") #왜 안바뀌니.
         st.write("")
         st.write(':star: 스벅쿠폰 드려요!')     
         st.write('만족도조사 하신분께!')
