@@ -62,16 +62,14 @@ def app():
         st.write("")
         st.write(':fire: KMLA Chatbot Team')
         st.write('(구환희,전지훈,권휘우)')
-        st.write("") #왜 안바뀌니.
+        st.write("") 
         st.write("")
-        st.write(':star: 스벅쿠폰 드려요!')     
-        st.write('만족도조사 하신분께!')
+        st.write(':star: 만족도 조사') 
         st.write('(제출하기 버튼 Click!)')
-        st.write('** 기간 : ~ 5/18(토)')  
-        st.write(':cupcake:추첨 : 2만원 * 3명')
-        st.write(':cupcake:선정 : 2만원 * 2명')
+        st.write('** 기간 : ~ 5/18(토)')
         st.write("")
-
+        st.write("")
+        
         # 엑셀 다운로드
         password = st.text_input(":lock: 관리자", type="password")
         if password:
