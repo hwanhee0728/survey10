@@ -65,7 +65,7 @@ def app():
         st.write("") 
         st.write("")
         st.write(':star: 만족도 조사') 
-        st.write('(제출하기 버튼 Click!)')
+        st.write('제출하기 버튼 눌러주세요!')
         st.write('** 기간 : ~ 5/18(토)')
         st.write("")
         st.write("")
