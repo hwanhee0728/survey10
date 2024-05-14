@@ -26,17 +26,17 @@ def get_local_ip():
 # 데이터 저장 함수
 def save_data(new_data):
     try:
-        existing_data = pd.read_excel("survey_new.xlsx")
+        existing_data = pd.read_excel("survey_new2.xlsx")
         updated_data = pd.concat([existing_data, new_data], ignore_index=True)
     except FileNotFoundError:
         updated_data = new_data
 
-    updated_data.to_excel("survey_new.xlsx", index=False)
+    updated_data.to_excel("survey_new2.xlsx", index=False)
     st.success("설문 응답이 저장되었습니다.")
 
 # 엑셀 파일 다운로드를 위한 함수
 def download_excel():
-    filename = 'survey_new.xlsx'
+    filename = 'survey_new2.xlsx'
     with open(filename, "rb") as file:
         btn = st.download_button(
                 label="설문 결과 다운로드",
