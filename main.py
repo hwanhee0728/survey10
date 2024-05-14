@@ -88,14 +88,11 @@ def app():
         with st.form(key='survey_form'):
             name = st.text_input(":one: 기수와 이름을 적어주세요!")
             st.write("")
-            email_address = st.text_input(":two: e-mail 주소를 적어주세요!")
-            st.caption("(e-mail 주소를 추첨/쿠폰지급 이외의 용도로는 절대 사용하지 않습니다.)")
+            satisfaction = st.slider(":two: 답변에 대한 만족도 점수는? (10은 만족, 5는 보통)", 0, 10, 7)
             st.write("")
-            satisfaction = st.slider(":three: 답변에 대한 만족도 점수는? (10은 만족, 5는 보통)", 0, 10, 7)
+            positive_feedback = st.text_area(":three: 어떤 점이 마음에 들었죠?")
             st.write("")
-            positive_feedback = st.text_area(":four: 어떤 점이 마음에 들었죠?")
-            st.write("")
-            improvement_feedback = st.text_area(":five: 어떤 점을 개선하면 좋을까요?")
+            improvement_feedback = st.text_area(":four: 어떤 점을 개선하면 좋을까요?")
             st.write("")
             submit_button = st.form_submit_button(label='제출하기')
 
@@ -105,7 +102,6 @@ def app():
                 user_ip = get_local_ip()
                 new_data = pd.DataFrame({
                     "이름": [name],
-                    "e-mail주소": [email_address],
                     "만족도": [satisfaction],
                     "좋았던 점": [positive_feedback],
                     "개선하고 싶은 점": [improvement_feedback],
