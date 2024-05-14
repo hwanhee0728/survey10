@@ -26,17 +26,17 @@ def get_local_ip():
 # 데이터 저장 함수
 def save_data(new_data):
     try:
-        existing_data = pd.read_excel("survey.xlsx")
+        existing_data = pd.read_excel("survey_new.xlsx")
         updated_data = pd.concat([existing_data, new_data], ignore_index=True)
     except FileNotFoundError:
         updated_data = new_data
 
-    updated_data.to_excel("survey.xlsx", index=False)
+    updated_data.to_excel("survey_new.xlsx", index=False)
     st.success("설문 응답이 저장되었습니다.")
 
 # 엑셀 파일 다운로드를 위한 함수
 def download_excel():
-    filename = 'survey.xlsx'
+    filename = 'survey_new.xlsx'
     with open(filename, "rb") as file:
         btn = st.download_button(
                 label="설문 결과 다운로드",
@@ -69,7 +69,7 @@ def app():
         st.write('** 기간 : ~ 5/18(토)')
         st.write("")
         st.write("")
-        
+
         # 엑셀 다운로드
         password = st.text_input(":lock: 관리자", type="password")
         if password:
@@ -86,14 +86,16 @@ def app():
         
         # 사용자 입력 양식
         with st.form(key='survey_form'):
-            email_address = st.text_input(":one: e-mail 주소를 적어주세요!")
+            name = st.text_input(":one: 기수와 이름을 적어주세요!")
+            st.write("")
+            email_address = st.text_input(":two: e-mail 주소를 적어주세요!")
             st.caption("(e-mail 주소를 추첨/쿠폰지급 이외의 용도로는 절대 사용하지 않습니다.)")
             st.write("")
-            satisfaction = st.slider(":two: 답변에 대한 만족도 점수는? (10은 만족, 5는 보통)", 0, 10, 7)
+            satisfaction = st.slider(":three: 답변에 대한 만족도 점수는? (10은 만족, 5는 보통)", 0, 10, 7)
             st.write("")
-            positive_feedback = st.text_area(":three: 어떤 점이 마음에 들었죠?")
+            positive_feedback = st.text_area(":four: 어떤 점이 마음에 들었죠?")
             st.write("")
-            improvement_feedback = st.text_area(":four: 어떤 점을 개선하면 좋을까요?")
+            improvement_feedback = st.text_area(":five: 어떤 점을 개선하면 좋을까요?")
             st.write("")
             submit_button = st.form_submit_button(label='제출하기')
 
@@ -102,6 +104,7 @@ def app():
                 current_time = datetime.datetime.now() 
                 user_ip = get_local_ip()
                 new_data = pd.DataFrame({
+                    "이름": [name],
                     "e-mail주소": [email_address],
                     "만족도": [satisfaction],
                     "좋았던 점": [positive_feedback],
