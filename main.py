@@ -36,7 +36,7 @@ def save_data(new_data):
 
 # 엑셀 파일 다운로드를 위한 함수
 def download_excel():
-    filename = 'survey.xlsx'
+    filename = 'survey_new.xlsx'
     with open(filename, "rb") as file:
         btn = st.download_button(
                 label="설문 결과 다운로드",
