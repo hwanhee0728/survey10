@@ -67,7 +67,7 @@ def app():
         st.write(':star: 스벅쿠폰 드려요!')     
         st.write('만족도조사 하신분께!')
         st.write('(제출하기 버튼 Click!)')
-        st.write('**기간 : 5월13월~18토')  
+        st.write('** 기간 : ~ 5/18(토)')  
         st.write(':cupcake:추첨 : 2만원 * 3명')
         st.write(':cupcake:선정 : 2만원 * 2명')
         st.write("")
