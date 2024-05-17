@@ -65,7 +65,7 @@ def app():
         st.write("") 
         st.write("")
         st.write(':star: 설문 작성하시면') 
-        st.write('제출하기 눌러주세요!')
+        st.write('저장하기 눌러주세요!')
         st.write("")
         st.write("")
         st.write("")
@@ -94,7 +94,7 @@ def app():
             st.write("")
             improvement_feedback = st.text_area(":four: 어떤 점을 개선하면 좋을까요?")
             st.write("")
-            submit_button = st.form_submit_button(label='제출하기')
+            submit_button = st.form_submit_button(label='저장하기')
 
             # 제출 버튼이 눌렸을 때의 처리
             if submit_button:
