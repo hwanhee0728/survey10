@@ -64,7 +64,7 @@ def app():
         st.write('(구환희,전지훈,권휘우)')
         st.write("") 
         st.write("")
-        st.write(':star: 만족도 조사후') 
+        st.write(':star: 설문 작성하시면') 
         st.write('제출하기 눌러주세요!')
         st.write("")
         st.write("")
