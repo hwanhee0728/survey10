@@ -64,8 +64,9 @@ def app():
         st.write('(구환희,전지훈,권휘우)')
         st.write("") 
         st.write("")
-        st.write(':star: 설문 작성하시면') 
+        st.write(':star: 설문작성하시면') 
         st.write('저장하기 눌러주세요!')
+        st.write(":smile: 감사합니다!")
         st.write("")
         st.write("")
         st.write("")
@@ -111,8 +112,6 @@ def app():
                 
                 # 파일에 데이터 저장
                 save_data(new_data)
-            st.write("")
-            st.write(":smile: 감사합니다!")
 
 if __name__ == "__main__":
     app()
